@@ -32,6 +32,11 @@ In Codex's settings, point the "model / provider" at your local Ollama:
 - **Offline**: it keeps working when you're disconnected.
 - **Cost**: running locally means no API bill.
 
+### Gotchas I hit
+
+- I let it edit the main branch directly on a real project and had to untangle a mess. The rule I wrote down for myself: for anything non-trivial, have it work on a branch, never on main.
+- The app couldn't reach `localhost:11434` at first because Ollama wasn't started yet. Start Ollama first, then open the desktop app.
+
 ## Summary
 
 - ✅ the desktop assistant is wired to the local model

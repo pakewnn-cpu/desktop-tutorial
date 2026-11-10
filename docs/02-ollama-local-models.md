@@ -42,6 +42,12 @@ Ollama exposes a local HTTP endpoint at `http://localhost:11434`. The desktop
 assistant in the next step, and any other AI tool, can talk to the local model
 through it — **no need to send your data to a cloud provider**.
 
+### Gotchas I hit
+
+- The first `ollama pull` of a 27B model takes a while and the terminal looks completely frozen. It's downloading, not stuck — I killed it twice before I trusted it.
+- `ollama list` showed the model but `ollama run` just hung. The service wasn't actually running in the background; `brew services start ollama` (or `ollama serve` in a separate terminal) fixed it.
+- On a Mac with limited RAM, a 27B model will swap and crawl. I switched to `qwen2.5:7b` and it became usable again.
+
 ## Summary
 
 - ✅ a local model is running, and your data stays on your machine

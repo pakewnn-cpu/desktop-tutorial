@@ -50,6 +50,11 @@ git config --global https.proxy http://127.0.0.1:7892
 > `7892` is just an example port — use whatever your proxy software shows.
 > To turn it off later: `git config --global --unset http.proxy`.
 
+### Gotchas I hit
+
+- On Apple Silicon Macs, Homebrew installs to `/opt/homebrew`, and the PATH line it prints is different from the one in most older tutorials. If `brew` says "command not found" right after install, run the `echo 'export PATH ...'` line that the installer printed for you — don't copy the Intel version.
+- I left the git proxy on once and got confused when pushes suddenly failed on a fast connection. `git config --global --unset http.proxy` (and the `https.proxy` one) fixed it.
+
 ## Summary
 
 - ✅ Homebrew installed
