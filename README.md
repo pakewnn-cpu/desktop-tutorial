@@ -45,6 +45,7 @@ bash scripts/setup.sh
 
 > Stuck or unsure after setup? Run `bash scripts/check-model.sh` — it tells you
 > in one line whether Ollama is up, the model is pulled, and it actually answers.
+> Rebuilding the desktop is the slow part; the config is cheap to lose. Run `bash scripts/backup-config.sh` to snapshot your git identity and Ollama settings into a timestamped backup — model weights are excluded, so it stays small.
 
 ## Requirements
 
