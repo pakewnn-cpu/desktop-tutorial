@@ -20,6 +20,15 @@ In Codex's settings, point the "model / provider" at your local Ollama:
 > Exact menu names can shift between versions — look for something like
 > "Model / Provider".
 
+Before you start using it, I run a quick health check to make sure the
+desktop app can actually reach the model:
+
+```bash
+bash scripts/check-model.sh
+```
+
+![Running `check-model.sh` on my machine — all four checks pass, so the desktop app can reach the local model.](images/check-model.png)
+
 ## 3. Day-to-day use
 
 - Hand it a project folder and let it read, edit, and run commands.
