@@ -28,6 +28,11 @@ This is my daily loop, shared for reference.
 | git + GitHub | manage code, record progress, show the world what I'm building |
 | GitHub Actions | run checks automatically on every commit, so I don't do it by hand |
 
+### Gotchas I hit
+
+- I skipped "plan first" once and let it start editing a "small" change. It went down the wrong path and I had to undo it. Now I ask for a plan even on things that feel small.
+- I forgot to commit at the end of one day and lost track of what I'd actually done. The wrap-up commit, even a tiny one, is what keeps the graph honest.
+
 ## Summary
 
 The environment is ready — what's left is to **keep using it and keep committing**.

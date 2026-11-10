@@ -25,6 +25,9 @@ git config --global https.proxy http://127.0.0.1:7892
 > Use whatever port your proxy software shows. To disable it later:
 > `git config --global --unset http.proxy`.
 
+**Q: `git commit` says "Committer identity unknown"?**
+A: git doesn't know who I am yet. Set it once with `git config --global user.name "..."` and `git config --global user.email "..."`. I hit this on a fresh machine and my commits weren't attributed to me.
+
 ## Local models (Ollama)
 
 **Q: `ollama run` hangs or I run out of memory?**
