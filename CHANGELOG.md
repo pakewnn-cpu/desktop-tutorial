@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Added a contribution guide (`CONTRIBUTING.md`) for issues and pull requests.
 - Added a FAQ (`docs/05-faq.md`) and filled in the "Requirements" and "FAQ"
   sections of the README.
+- Added a health-check script (`scripts/check-model.sh`) to verify the local model is online.
 
 ### Changed
 - Wrote all tutorial and project docs in English and tidied the layout.

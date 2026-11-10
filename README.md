@@ -43,6 +43,9 @@ bash scripts/setup.sh
 > The full walkthrough is in [`docs/`](docs/). Each file explains not just *how*
 > but *why* — so it sticks.
 
+> Stuck or unsure after setup? Run `bash scripts/check-model.sh` — it tells you
+> in one line whether Ollama is up, the model is pulled, and it actually answers.
+
 ## Requirements
 
 Before you run `setup.sh`, make sure your machine meets these:
@@ -63,6 +66,7 @@ Before you run `setup.sh`, make sure your machine meets these:
 - ✅ a **local-first** AI setup (private, offline, no cloud dependency)
 - ✅ a **reproducible** one-command install script
 - ✅ a CI pipeline that **checks automatically** on every commit
+- ✅ a tiny **health-check** script to confirm the local model is online
 - ✅ a guide written **for self-taught developers**
 
 ## FAQ
