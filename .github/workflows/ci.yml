@@ -1,0 +1,51 @@
+name: CI
+
+# 触发时机：推送到 main、收到 PR、以及手动点「Run workflow」时
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  check:
+    name: 基础检查
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 检查 shell 脚本语法
+        run: |
+          shopt -s nullglob
+          found=0
+          for f in scripts/*.sh; do
+            found=1
+            echo "语法检查：$f"
+            bash -n "$f"
+          done
+          if [ "$found" -eq 0 ]; then
+            echo "没有 shell 脚本，跳过。"
+          fi
+
+      - name: ShellCheck 规范检查
+        # 只做提示、不阻断构建（教程仓库，重在示范）
+        continue-on-error: true
+        run: |
+          if command -v shellcheck >/dev/null 2>&1; then
+            shellcheck --severity=warning scripts/*.sh || true
+          else
+            echo "shellcheck 未安装，跳过。"
+          fi
+
+      - name: 确认关键文件存在
+        run: |
+          for f in README.md LICENSE .gitignore docs/30天GitHub运营计划.md; do
+            if [ -f "$f" ]; then
+              echo "✓ $f"
+            else
+              echo "✗ 缺少 $f"
+              exit 1
+            fi
+          done
