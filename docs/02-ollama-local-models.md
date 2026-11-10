@@ -26,6 +26,8 @@ ollama list                    # see what's on your machine
 > 27B is a big model and eats memory. If your Mac has little RAM, grab a lighter
 > one instead: `ollama pull qwen2.5:7b` or `ollama pull llama3.1:8b`.
 
+![The output of `ollama list` on my machine — five models, and the 27B one is the one I code with.](images/ollama-list.png)
+
 ## 3. Run it
 
 ```bash

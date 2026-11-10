@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 - Added a one-click config backup script (`scripts/backup-config.sh`) that snapshots your git identity and Ollama settings into a timestamped tarball, excluding model weights.
+- Added a real terminal screenshot of `ollama list` to the local-models guide (`docs/images/ollama-list.png`) so the step is easier to follow.
 
 ## [0.1.0] - 2026-11-10
 
