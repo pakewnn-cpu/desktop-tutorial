@@ -38,6 +38,13 @@ machine, use a lighter model: `MODEL=qwen2.5:7b bash scripts/setup.sh`.
 A: By default `http://localhost:11434` — point your desktop assistant's model
 provider at it.
 
+**Q: After installing Ollama, `ollama` says "command not found"?**
+A: The terminal hasn't picked up the new command yet. Open a brand-new terminal
+window, or reload your shell config (`source ~/.zshrc` on zsh, `source
+~/.bash_profile` on bash). If it's still missing, the installer put the binary in
+a folder that isn't on your `PATH` — add that folder to `PATH` in your shell
+config and reload again.
+
 ## Desktop assistant
 
 **Q: The desktop app can't reach the local model?**
