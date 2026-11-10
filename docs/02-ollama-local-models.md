@@ -1,0 +1,50 @@
+# 02 · Local models with Ollama
+
+**Ollama** lets you run a large language model on **your own machine** — your
+data never leaves the computer, and it works offline. This is the core of a
+"local-first" AI setup.
+
+## 1. Install
+
+```bash
+brew install ollama
+brew services start ollama      # start at login, keep it running in the background
+```
+
+Verify: open a browser to `http://localhost:11434`. If it loads, it's running.
+
+## 2. Pull a model
+
+You download a model once, then reuse it locally. I usually reach for
+`qwen-codex:27b` (good for coding):
+
+```bash
+ollama pull qwen-codex:27b
+ollama list                    # see what's on your machine
+```
+
+> 27B is a big model and eats memory. If your Mac has little RAM, grab a lighter
+> one instead: `ollama pull qwen2.5:7b` or `ollama pull llama3.1:8b`.
+
+## 3. Run it
+
+```bash
+# one-shot question
+ollama run qwen-codex:27b "explain a vector database in one sentence"
+
+# interactive chat (Ctrl+C to quit)
+ollama run qwen-codex:27b
+```
+
+## 4. Let other programs call it
+
+Ollama exposes a local HTTP endpoint at `http://localhost:11434`. The desktop
+assistant in the next step, and any other AI tool, can talk to the local model
+through it — **no need to send your data to a cloud provider**.
+
+## Summary
+
+- ✅ a local model is running, and your data stays on your machine
+- ✅ you know the endpoint: `http://localhost:11434`
+
+Next: [03 · Desktop assistant with Codex](03-codex-desktop.md).

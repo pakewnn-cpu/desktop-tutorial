@@ -5,25 +5,25 @@
 Icon
 ._*
 
-# 临时 / 缓存
+# temp / cache
 *.log
 *.tmp
 *.swp
 *~
 
-# 环境变量 / 密钥（千万别传上去）
+# env vars / secrets (never commit these)
 .env
 .env.*
 *.pem
 *.key
 secrets/
 
-# 本地模型 / 大文件
+# local models / large files
 models/
 *.gguf
 ollama/
 
-# 依赖
+# dependencies
 node_modules/
 .venv/
 __pycache__/
