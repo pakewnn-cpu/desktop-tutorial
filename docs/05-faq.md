@@ -51,6 +51,13 @@ config and reload again.
 A: Check three things: ① Ollama is running (`ollama serve`); ② the model is pulled
 (it shows up in `ollama list`); ③ the provider URL is `http://localhost:11434`.
 
+**Q: The desktop assistant says it can't use the network, even though I'm on a VPN?**
+A: The app doesn't always pick up the system VPN by itself. When it needed to
+reach GitHub or other sites, I pointed it at my local proxy
+(`http://127.0.0.1:7892` — use whatever port your proxy software shows) and made
+sure the proxy was actually running first. SSH `git push` often works without
+it; HTTPS and the GitHub API usually don't.
+
 ---
 
 > Got a question that isn't covered here? Open an [issue](https://github.com/pakewnn-cpu/desktop-tutorial/issues)

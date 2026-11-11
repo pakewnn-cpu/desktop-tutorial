@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- Added a FAQ entry for when the desktop assistant cannot use the network even though a VPN is on (`docs/05-faq.md`).
 - Added a one-click config backup script (`scripts/backup-config.sh`) that snapshots your git identity and Ollama settings into a timestamped tarball, excluding model weights.
 - Added a real terminal screenshot of `ollama list` to the local-models guide (`docs/images/ollama-list.png`) so the step is easier to follow.
 - Added a "command not found" entry to the FAQ (`docs/05-faq.md`) for the common case where the `ollama` command is missing right after install.
