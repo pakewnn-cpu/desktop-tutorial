@@ -51,6 +51,13 @@ endpoint is down until you launch it. Start Ollama again (open the app, or run
 `ollama serve` in a terminal), then retry. To stop it from happening every time,
 turn on "Start at login" in Ollama's settings so it comes back on its own.
 
+**Q: `check-model.sh` says the model is offline, but `ollama list` shows it?**
+A: `ollama list` only reads the model files on disk — it doesn’t mean the server
+is running. The checks that actually matter talk to `http://localhost:11434`, so
+if the Ollama server isn’t up, every HTTP check fails even though the model is
+clearly downloaded. Start the server (`ollama serve`, or open the Ollama app),
+then re-run `check-model.sh`.
+
 ## Desktop assistant
 
 **Q: The desktop app can't reach the local model?**
