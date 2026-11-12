@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Added a real terminal screenshot of `ollama list` to the local-models guide (`docs/images/ollama-list.png`) so the step is easier to follow.
 - Added a "command not found" entry to the FAQ (`docs/05-faq.md`) for the common case where the `ollama` command is missing right after install.
 - Added a terminal screenshot of `check-model.sh` to the Codex desktop guide (`docs/images/check-model.png`) so the "connect the local model" step is easier to follow.
+- Added a terminal screenshot of `git log --oneline` to the AI-workflow guide (`docs/images/git-log.png`) so the "commit in small steps" point is easier to follow.
 
 ## [0.1.0] - 2026-11-10
 

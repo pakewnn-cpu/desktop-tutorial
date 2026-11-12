@@ -19,6 +19,11 @@ This is my daily loop, shared for reference.
 - **Local first**: if it can run on your machine, keep it there — privacy, cost,
   and offline access all come for free.
 
+Here's what that "small steps" habit looks like on my own repo — a few recent
+commits, each one a single, clear change:
+
+![My recent commits on my own repo — each one a small, clear step, which is what keeps the graph active.](images/git-log.png)
+
 ## How I split the tools
 
 | Tool | What it's for |
