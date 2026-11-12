@@ -45,6 +45,12 @@ window, or reload your shell config (`source ~/.zshrc` on zsh, `source
 a folder that isn't on your `PATH` — add that folder to `PATH` in your shell
 config and reload again.
 
+**Q: After a reboot, the desktop assistant can't reach the local model, even though it worked before?**
+A: Ollama doesn't start by itself when the Mac boots, so the `http://localhost:11434`
+endpoint is down until you launch it. Start Ollama again (open the app, or run
+`ollama serve` in a terminal), then retry. To stop it from happening every time,
+turn on "Start at login" in Ollama's settings so it comes back on its own.
+
 ## Desktop assistant
 
 **Q: The desktop app can't reach the local model?**
