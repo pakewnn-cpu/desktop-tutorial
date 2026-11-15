@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Added a terminal screenshot of `check-model.sh` to the Codex desktop guide (`docs/images/check-model.png`) so the "connect the local model" step is easier to follow.
 - Added a terminal screenshot of `git log --oneline` to the AI-workflow guide (`docs/images/git-log.png`) so the "commit in small steps" point is easier to follow.
 - Added a FAQ entry for when `check-model.sh` reports the model offline even though `ollama list` shows it (`docs/05-faq.md`).
+- Added a terminal screenshot of the environment checks (`docs/images/env-setup.png`) so the "foundation done" step in the setup guide is easier to follow.
 
 ## [0.1.0] - 2026-11-10
 

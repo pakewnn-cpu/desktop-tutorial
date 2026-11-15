@@ -61,4 +61,6 @@ git config --global https.proxy http://127.0.0.1:7892
 - ✅ git installed and identity configured
 - ✅ proxy configured (if you need it)
 
+![The three checks on my machine — `brew --version`, `git --version`, and the git identity all come back, so the foundation is done.](images/env-setup.png)
+
 Foundation done. Next: [02 · Local models with Ollama](02-ollama-local-models.md).
