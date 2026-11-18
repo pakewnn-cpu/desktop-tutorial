@@ -58,6 +58,15 @@ if the Ollama server isn’t up, every HTTP check fails even though the model is
 clearly downloaded. Start the server (`ollama serve`, or open the Ollama app),
 then re-run `check-model.sh`.
 
+**Q: Each response is slow, or the model seems to reload every time?**
+A: That's usually the model being unloaded between requests. I set `OLLAMA_KEEP_ALIVE=-1` (unload right after each request) to free RAM, but with a
+27B-class model that means it has to reload ~30GB from disk on the next message,
+so the first token of every reply is slow. To keep it warm, raise the value --
+`export OLLAMA_KEEP_ALIVE=30m` (or `1h` / `24h`) before starting the server, so it
+stays in memory for that long after the last request. Trade-off: a kept-alive
+model holds its RAM the whole time, so only keep it alive if you have the memory
+to spare. The default is 5 minutes.
+
 ## Desktop assistant
 
 **Q: The desktop app can't reach the local model?**
