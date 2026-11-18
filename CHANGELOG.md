@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- Added a FAQ entry for when the first `git push` asks for a password or fails with `Permission denied (publickey)` (`docs/05-faq.md`).
 - Added a FAQ entry for when a large local model feels slow because it keeps unloading between requests (`docs/05-faq.md`).
 - Added a FAQ entry for when the local model is unreachable after a reboot (`docs/05-faq.md`).
 - Added a FAQ entry for when the desktop assistant cannot use the network even though a VPN is on (`docs/05-faq.md`).

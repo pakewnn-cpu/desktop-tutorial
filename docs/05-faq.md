@@ -28,6 +28,9 @@ git config --global https.proxy http://127.0.0.1:7892
 **Q: `git commit` says "Committer identity unknown"?**
 A: git doesn't know who I am yet. Set it once with `git config --global user.name "..."` and `git config --global user.email "..."`. I hit this on a fresh machine and my commits weren't attributed to me.
 
+**Q: First time I `git push` to GitHub it asks for a username and password, or I get "Permission denied (publickey)"?**
+A: I was pushing over the HTTPS remote and had no credentials saved, or I never set up an SSH key in the first place. The fix that stuck was doing the SSH setup once: `ssh-keygen -t ed25519 -C "me@example.com"`, copy the public key at `~/.ssh/id_ed25519.pub` into GitHub under Settings → SSH keys, then switch the remote to the SSH form with `git remote set-url origin git@github.com:me/repo.git`. After that push just works without asking for a password.
+
 ## Local models (Ollama)
 
 **Q: `ollama run` hangs or I run out of memory?**
