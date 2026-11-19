@@ -68,6 +68,7 @@ Before you run `setup.sh`, make sure your machine meets these:
 - ✅ a **reproducible** one-command install script
 - ✅ a CI pipeline that **checks automatically** on every commit
 - ✅ a tiny **health-check** script to confirm the local model is online
+- ✅ a **disk-check** script to see how much space your models are using
 - ✅ a guide written **for self-taught developers**
 
 ## FAQ
