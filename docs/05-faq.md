@@ -41,6 +41,13 @@ machine, use a lighter model: `MODEL=qwen2.5:7b bash scripts/setup.sh`.
 A: By default `http://localhost:11434` — point your desktop assistant's model
 provider at it.
 
+**Q: The desktop app can't reach the model, but `curl http://localhost:11434` works in my terminal?**
+A: On macOS `localhost` resolves to two addresses — `127.0.0.1` (IPv4) and `::1`
+(IPv6) — and Ollama only listens on `127.0.0.1`. An app that tries `::1` first
+gives up even though the server is up, while my terminal tried `127.0.0.1` first,
+so `curl` looked fine. The fix that worked for me was pointing the app's provider
+URL at `http://127.0.0.1:11434` instead of `http://localhost:11434`.
+
 **Q: After installing Ollama, `ollama` says "command not found"?**
 A: The terminal hasn't picked up the new command yet. Open a brand-new terminal
 window, or reload your shell config (`source ~/.zshrc` on zsh, `source
